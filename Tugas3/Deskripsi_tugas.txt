@@ -1,0 +1,27 @@
+Transformasi Koordinat Foto ke Koordinat Layar
+Diketahui sebuah foto dengan ukuran m × n menggunakan sistem koordinat Kartesius:
+ Titik (0,0) berada di pojok kiri bawah.
+ Nilai x bertambah ke kanan.
+ Nilai y bertambah ke atas.
+Di dalam foto terdapat objek:
+Persegi Panjang dengan koordinat titik sudut sebagai berikut: A(5,0), B(10,0), C(10,15), D(5,15)
+Garis dengan koordinat titing ujung adalah P(20,0) dan Q(20,20)
+Foto tersebut akan ditampilkan pada layar berukuran u × v dengan sistem koordinat layar:
+ Titik (0,0) berada di pojok kiri atas
+ Nilai x bertambah ke kanan
+ Nilai y bertambah ke bawah
+
+Pertanyaan
+1. Jelaskan perbedaan antara sistem koordinat foto dan sistem koordinat layar.
+2. Tentukan transformasi apa saja yang diperlukan agar gambar dari foto dapat ditampilkan
+dengan benar pada layar.
+3. Tuliskan rangkaian transformasi dalam bentuk perkalian matriks homogen 3×3.
+4. Tuliskan bentuk matriks transformasi total yang memetakan koordinat foto ke koordinat
+layar.
+
+Ketentuan Pengumpulan
+1. Jawaban dikumpulkan dalam satu dokumen untuk setiap kelompok.
+2. Dokumen harus memuat:
+o Penjelasan analisis
+o Ilustrasi atau sketsa jika diperlukan
+o Pseudocode atau bentuk matriks transformasi

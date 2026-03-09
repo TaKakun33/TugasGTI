@@ -1,0 +1,21 @@
+Analisis Transformasi pada Sistem Bumi–Bulan
+Diberikan sebuah visualisasi animasi sederhana yang menampilkan:
+ Bumi berotasi pada porosnya.
+ Bulan berotasi pada porosnya.
+ Bulan berevolusi mengelilingi Bumi dalam lintasan melingkar.
+Animasi berjalan secara kontinu (frame per frame).
+
+Pertanyaan
+1. Transformasi apa saja yang terjadi pada Bumi?
+2. Transformasi apa saja yang terjadi pada Bulan?
+3. Jelaskan urutan transformasi yang terjadi pada Bulan dalam satu iterasi animasi.
+4. Jelaskan mengapa urutan transformasi mempengaruhi hasil visualisasi.
+5. Tuliskan pseudocode sederhana yang menggambarkan proses animasi tersebut.
+
+Petunjuk
+Analisis harus ditulis dalam bentuk proses iteratif (loop animasi).
+Contoh konsep yang perlu diperhatikan:
+ Rotasi Bumi terhadap pusatnya
+ Rotasi Bulan terhadap pusatnya
+ Revolusi Bulan mengelilingi Bumi
+ Translasi posisi Bulan pada orbitnya

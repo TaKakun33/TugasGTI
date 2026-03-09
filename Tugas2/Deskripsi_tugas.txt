@@ -1,0 +1,13 @@
+Analisis Transformasi pada Animasi Pergerakan Roda Sepeda
+Diberikan sebuah visualisasi animasi yang menampilkan:
+ Sebuah sepeda bergerak maju secara horizontal.
+ Roda sepeda berputar mengikuti arah gerakan sepeda.
+ Pusat roda berpindah mengikuti pergerakan sepeda.
+Animasi berjalan secara kontinu (frame per frame).
+
+Pertanyaan
+1. Transformasi apa yang menyebabkan sepeda bergerak maju?
+2. Transformasi apa yang menyebabkan roda berputar?
+3. Jelaskan hubungan antara translasi sepeda dan rotasi roda.
+4. Urutkan transformasi yang terjadi pada roda dalam satu iterasi animasi.
+5. Tuliskan pseudocode sederhana dari proses animasi tersebut.
