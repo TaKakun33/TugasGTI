@@ -1,0 +1,71 @@
+// fungsi utama untuk menggambar planet yang bisa berputar
+procedure drawRotatingPlanet(radius, rotationAngle, r, g, b)
+    // gambar bola utama (planet)
+    set_color(r, g, b)
+    draw_filled_circle(radius)
+    
+    // gambar garis-garis bujur untuk efek rotasi
+    for offset from 0 to 360 step 30 do
+        current_angle = rotationAngle + offset
+        
+        // hitung faktor lebar garis (efek 3d saat berputar)
+        widthFactor = sin(current_angle)
+        
+        if (garis_berada_di_depan) then
+            set_color(hitam)
+            set_line_width(tebal)
+        else
+            set_color(warna_pudar)
+            set_line_width(tipis)
+        
+        draw_vertical_curve(radius * widthFactor)
+    {end for}
+
+    // gambar garis ekuator dan garis tepi (outline)
+    draw_equator_perspective(radius)
+    draw_circle_outline(radius)
+
+// fungsi display (render per frame)
+procedure display()
+    clear_screen()
+    reset_transformations()
+
+    // gambar jalur lintasan orbit bulan (lingkaran abu-abu)
+    draw_orbit_path(radius = 0.7)
+
+    // render bumi (berada di titik pusat)
+    push_matrix()
+        drawRotatingPlanet(radius = 0.22, angle = rotasiBumi, color = biru)
+    pop_matrix()
+
+    // render bulan (kelilingi bumi)
+    push_matrix()
+        // hitung koordinat x dan y berdasarkan sudut evolusi
+        moonX = 0.7 * cos(evolusiBulan)
+        moonY = 0.7 * sin(evolusiBulan)
+        
+        translate(moonX, moonY) // pindahkan bulan ke posisi orbit
+        drawRotatingPlanet(radius = 0.07, angle = rotasiBulan, color = abu_abu)
+    pop_matrix()
+
+    refresh_buffer()
+
+// fungsi timer (update logika animasi)
+procedure timer()
+    // update nilai sudut rotasi dan orbit
+    rotasiBumi += 2.0
+    rotasiBulan += 1.0
+    evolusiBulan += 0.3
+    
+    // reset sudut ke 0 kalau sudah lewat 360 derajat
+    keep_angles_under_360()
+
+    request_redisplay()
+    set_next_timer(16ms) 
+
+// fungsi main (inisialisasi)
+procedure main()
+    init_window_and_opengl()
+    set_background_color(putih)
+    
+    start_main_loop(display, timer)
